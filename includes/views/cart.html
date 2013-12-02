@@ -1,0 +1,25 @@
+<script>
+// cart layout settings
+	simpleCart({
+		cartColumns: [
+			{ attr: "thumb", label: false, view: "image"},
+			{ attr: "name" , label: "Name" },
+			{ attr: "quantity", label: "Quantity", view: "input"},
+			{ view: "remove", text: "Remove", label: false},
+			{ attr: "price", label: "Price", view: "currency"},
+			{ attr: "total" , label: "Subtotal", view: "currency"  }
+		],
+		cartStyle: "table"
+	});
+</script>
+<div class="simpleCart_items" ></div>
+SubTotal: <span id="simpleCart_total" class="simpleCart_total"></span> <br />
+<!--
+Tax Rate: <span id="simpleCart_taxRate" class="simpleCart_taxRate"></span> <br />
+Tax: <span id="simpleCart_tax" class="simpleCart_tax"></span> <br />
+-->
+Shipping: <span id="simpleCart_shipping" class="simpleCart_shipping"></span> <br />
+-----------------------------<br />
+Final Total: <span id="simpleCart_grandTotal" class="simpleCart_grandTotal"></span> <br />
+
+<a href="javascript:;" class="simpleCart_checkout">checkout</a>

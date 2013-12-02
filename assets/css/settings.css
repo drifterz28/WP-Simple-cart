@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+.simple-settings-form {
+	padding:10px;
+}
+	.radios {
+		padding: 5px 0;
+		display: block;
+	}
+		.radios input {
+			margin-right: 20px;	
+		}
+	
+	.control-group {
+		margin-bottom:10px;
+	}
+		.control-label {
+			float: left;
+			width: 160px;
+			padding-top: 5px;
+			text-align: right;
+		}
+		
+		.controls {
+			margin-left: 180px;
+		}
+			.controls input {
+				width:300px;
+			}
+			
+			.controls input[type="checkbox"] {
+				width: 20px;
+				margin: 6px 0;
+			}

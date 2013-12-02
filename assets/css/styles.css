@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+.item-wrapper {
+	float:left;
+}
+	.row {
+		width:100%;
+		float: left;
+	}
+		.item {
+			float:left;
+		}
+			.item img {
+				margin: 0 auto;
+				display: block;
+			}
+			
+			.the-title {
+				text-align:center;
+				font-weight:bold;
+				display: block;
+				padding: 10px;
+			}
+			
+			.price,
+			.sale-price {
+				float: left;
+				padding: 5px 10px;
+				width: 100%;	
+			}
+			
+			.price,
+			.table-price {
+				font-weight:bold;
+			}
+			
+			.price.on-sale,
+			.table-price.on-sale {
+				text-decoration: line-through;
+			}
+			
+			.sale-price,
+			.table-sale-price {
+				font-weight:bold;
+				color:#c00000;
+			}
+	.itemRow td {vertical-align: middle;}
+
+/* ####### item page ####### */
+
+.image-wrapper,
+.product-details {
+	float:left;
+	width:50%;
+}	
+	.details-table {
+		float:right;
+		border: 1px solid #ddd;
+	}
+		.details-table td {
+			border:1px solid #ddd;
+			padding: 5px;
+			vertical-align: middle;
+		}
+			.table-price,
+			.table-sale-price {
+				
+			}
+
+/* ####### Floating cart ####### */
+
+#cartPopover {
+	width:250px;
+	position: relative;
+}
+
+	#triangle {
+		color: #45484A;
+    	font-size: 24px;
+    	left: 50%;
+    	margin-left: -12px;
+    	position: absolute;
+    	text-shadow: 0 1px 0 #444749;
+    	top: -21px;
+    	transform: scale(1.2, 0.8) translateY(1.5px);
+	}
+	
+	#cartPopover .headerRow > div,
+	#cartPopover .itemRow > div {
+		width: 40%;
+		float: left;
+		min-height: 1px;
+	}
+	
+	#cartPopover .headerRow > .item-quantity,
+	#cartPopover .itemRow > .item-quantity {
+		width:20%;
+	}
+	
+	#cartPopover .itemRow,
+	#cartPopover .headerRow {
+		float: left;
+		width: 100%;
+	}
+	
+	#cartPopover input {width:20px;}
+	
+/* ######## Cart page ######## */
+	
+.item-quantity input {
+	width:60px;
+}
+
+.simpleCart_checkout {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	text-decoration: none;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid rgba(0, 0, 0, 0);
+	border-radius: 4px;
+	color: #FFF;
+	background-color: #D9534F;
+	border-color: #D43F3A;
+}
+
+.simpleCart_checkout:hover {
+	color: #FFF;
+	background-color: #D2322D;
+	border-color: #AC2925;
+}
