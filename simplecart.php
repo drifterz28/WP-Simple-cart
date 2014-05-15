@@ -6,16 +6,16 @@
 /*
 Plugin Name: Simple Cart
 Plugin URI: http://wordpress.org/plugins
-Description: Create a simple cart with paypal, google checkout
-Author: Chris Whitney
+Description: Create a simple cart with paypal checkout
+Author: E-comm Solution
 Version: 0.1
-Author URI: http:e-commsolution.com
+Author URI: http://e-commsolution.com
 */
 
-/*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
+/*  Copyright 2014 E-comm Solution info@e-commsolution.com
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
+    it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,
@@ -48,8 +48,8 @@ function include_template_function( $template_path ) {
             } else {
                 $template_path = plugin_dir_path( __FILE__ ) . '/templates/single-products.php';
             }
-        }elseif( is_archive() ){
-        	if ( $theme_file = locate_template( array ( 'archive-products.php' ) ) ) {
+        }else if( is_archive() ){
+        	if ($theme_file = locate_template(array ('archive-products.php'))) {
                 $template_path = $theme_file;
             } else {
                 $template_path = plugin_dir_path( __FILE__ ) . '/templates/archive-products.php';
@@ -59,7 +59,7 @@ function include_template_function( $template_path ) {
     return $template_path;
 }
 
-function simplecart_func( $atts ){
+function simplecart_func( $atts ) {
 	extract( shortcode_atts( array(
 		'foo' => 'something',
 		'bar' => 'something else',
@@ -69,7 +69,7 @@ function simplecart_func( $atts ){
 
 function simplecart_set_activate() {
 	global $option_name;
-	$defaults = '{"title":"","slug":"items","imgwidth":"300","imgheight":"300","thumbwidth":"200","thumbheight":"200","price":"Price","saleprice":"Sale Price","perrow":"3","perpage":"12","currency":"USD","symbol":"$","taxRate":"","type":"PayPal","email":"you@example.com","success":"index.php","cancel":"index.php"}';
+	$defaults = '{"title": "", "slug": "items", "imgwidth": "300", "imgheight": "300", "thumbwidth": "200", "thumbheight": "200", "price": "Price", "saleprice": "Sale Price", "perrow": "3", "perpage": "12", "currency": "USD", "symbol": "$", "taxRate": "", "type": "PayPal", "email": "you@example.com", "success": "index.php", "cancel": "index.php"}';
     update_option($option_name, $defaults);
 }
 

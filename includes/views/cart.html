@@ -1,16 +1,16 @@
 <script>
 // cart layout settings
-	simpleCart({
-		cartColumns: [
-			{ attr: "thumb", label: false, view: "image"},
-			{ attr: "name" , label: "Name" },
-			{ attr: "quantity", label: "Quantity", view: "input"},
-			{ view: "remove", text: "Remove", label: false},
-			{ attr: "price", label: "Price", view: "currency"},
-			{ attr: "total" , label: "Subtotal", view: "currency"  }
-		],
-		cartStyle: "table"
-	});
+    simpleCart({
+        cartColumns: [
+            { attr: "thumb", label: false, view: "image"},
+            { attr: "name" , label: "Name" },
+            { attr: "quantity", label: "Quantity", view: "input"},
+            { view: "remove", text: "Remove", label: false},
+            { attr: "price", label: "Price", view: "currency"},
+            { attr: "total" , label: "Subtotal", view: "currency"  }
+        ],
+        cartStyle: "table"
+    });
 </script>
 <div class="simpleCart_items" ></div>
 SubTotal: <span id="simpleCart_total" class="simpleCart_total"></span> <br />

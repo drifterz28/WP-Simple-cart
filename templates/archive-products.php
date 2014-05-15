@@ -27,10 +27,10 @@ get_header(); ?>
             		<?php the_title(); ?>
             	</a>
             	<span class="price <?php echo (!empty($sale_price))? 'on-sale':'';?>"><?php echo $options['price'].' '.$options['symbol'].number_format($price, 2, '.', ','); ?></span>
-				
-				<?php 
+				<?php
+                    // TODO: clean this up and use nicer vars.
 					if(!empty($sale_price)){
-						echo '<span class="sale-price">'.$options['saleprice'].' '.$options['symbol'].number_format($sale_price, 2, '.', ',').'</span>'; 
+						echo '<span class="sale-price">'.$options['saleprice'].' '.$options['symbol'].number_format($sale_price, 2, '.', ',').'</span>';
 					}
 				?>
             </div>

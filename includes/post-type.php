@@ -1,7 +1,7 @@
 <?php
 // check slug and update if not set
 if(empty($options['slug'])){
-	$options['slug'] = 'products';
+    $options['slug'] = 'products';
 }
 
 /**
@@ -15,16 +15,16 @@ function remove_cpt_slug( $post_link, $post, $leavename ) {
 }
 
 function simplecart_parse_request_tricksy( $query ) {
- 
+
     // Only noop the main query
     if ( ! $query->is_main_query() )
         return;
- 
+
     // Only noop our very specific rewrite rule match
     if ( 2 != count( $query->query )
         || ! isset( $query->query['page'] ) )
         return;
- 
+
     // 'name' will be set if post permalinks are just post_name, otherwise the page rule will match
     if ( ! empty( $query->query['name'] ) )
         $query->set( 'post_type', array( 'post', 'product', 'page' ) );
@@ -32,22 +32,22 @@ function simplecart_parse_request_tricksy( $query ) {
 
 // create post type
 function create_post_type() {
-	global $options;
-	register_post_type( 'product',
-		array(
-			'labels' => array(
-				'name' => __( 'Products' ),
-				'singular_name' => __( 'Product' )
-			),
-		'public' => true,
-		'capability_type' => 'post',
-		'has_archive' => true,
-		'hierarchical' => true,
-		'show_in_nav_menus' => true,
-		'rewrite'		=> array( 'slug' => $options['slug'],'with_front' => true),
-		'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes')
-		)
-	);
+    global $options;
+    register_post_type( 'product',
+        array(
+            'labels' => array(
+                'name' => __( 'Products' ),
+                'singular_name' => __( 'Product' )
+            ),
+        'public' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => true,
+        'show_in_nav_menus' => true,
+        'rewrite'       => array( 'slug' => $options['slug'],'with_front' => true),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes')
+        )
+    );
 }
 
 // add meta boxes to post type
@@ -122,22 +122,22 @@ function product_categories_taxonomies() {
 
 // Create custom permalinks for portfolio post type
 function simplecart_custom_permalinks( $rules ) {
- 	$newrules = array();
-		$newrules['products/page/([^/]+)/?$'] = 'index.php?pagename=products&paged=$matches[1]';
-		$newrules['products/page/([^/]+)?$'] = 'index.php?pagename=products&paged=$matches[1]';
-	// return $newrules + $rules;
-	if ( $rules ) {
-		return array_merge( $newrules, $rules );
-	}	
+    $newrules = array();
+        $newrules['products/page/([^/]+)/?$'] = 'index.php?pagename=products&paged=$matches[1]';
+        $newrules['products/page/([^/]+)?$'] = 'index.php?pagename=products&paged=$matches[1]';
+    // return $newrules + $rules;
+    if ( $rules ) {
+        return array_merge( $newrules, $rules );
+    }
 }
 
 // flush_rules() if our rules are not yet included
 function simplecart_flush_rules(){
-	$rules = get_option( 'rewrite_rules' );
-	if ( ! isset( $rules['products/page/([^/]+)/?$'] ) ) {
-		global $wp_rewrite;
-		$wp_rewrite->flush_rules();
-	}
+    $rules = get_option( 'rewrite_rules' );
+    if ( ! isset( $rules['products/page/([^/]+)/?$'] ) ) {
+        global $wp_rewrite;
+        $wp_rewrite->flush_rules();
+    }
 }
 
 
