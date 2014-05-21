@@ -1,15 +1,16 @@
 <?php
 /**
- * @package Simple Cart
- * @version 1.1
+ * @package WP Simple Cart
+ * @version 0.6
  */
 /*
-Plugin Name: Simple Cart
-Plugin URI: http://wordpress.org/plugins
+Plugin Name: WP Simple Cart
+Plugin URI: https://github.com/drifterz28/WP-Simple-cart
 Description: Create a simple cart with paypal checkout
 Author: E-comm Solution
-Version: 1.1
+Version: 0.6
 Author URI: http://e-commsolution.com
+GitHub Plugin URI: https://github.com/drifterz28/WP-Simple-cart
 */
 
 /*  Copyright 2014 E-comm Solution info@e-commsolution.com

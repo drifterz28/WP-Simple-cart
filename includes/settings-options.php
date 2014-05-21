@@ -49,5 +49,5 @@ if (is_admin()) { // note the use of is_admin() to double check that this is hap
         'readme' => 'readme.md', // which file to use as the readme for the version number
         'access_token' => '', // Access private repositories by authorizing under Appearance > Github Updates when this example plugin is installed
     );
-    new WP_GitHub_Updater($config);
+    $github_updater = new wp_github_updater( $config );
 }
