@@ -39,7 +39,7 @@ function create_post_type() {
                 'name' => __( 'Products' ),
                 'singular_name' => __( 'Product' ),
                 'new_item' => 'New Item',
-                'edit_item' => 'Edit Item'
+                'edit_item' => 'Edit Item',
                 'add_new_item' => 'Add New Item'
             ),
         'public' => true,

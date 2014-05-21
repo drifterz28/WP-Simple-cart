@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Simple Cart
- * @version 0.4
+ * @version 1.1
  */
 /*
 Plugin Name: Simple Cart
 Plugin URI: http://wordpress.org/plugins
 Description: Create a simple cart with paypal checkout
 Author: E-comm Solution
-Version: 0.4
+Version: 1.1
 Author URI: http://e-commsolution.com
 */
 
