@@ -35,6 +35,7 @@ $options = json_decode($simple_options,true);
 
 // creates the post type in wp-admin
 include 'includes/post-type.php';
+include 'includes/updater.php';
 include 'includes/cart-widget.php';
 include 'includes/settings-options.php';
 

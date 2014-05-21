@@ -37,13 +37,17 @@ function create_post_type() {
         array(
             'labels' => array(
                 'name' => __( 'Products' ),
-                'singular_name' => __( 'Product' )
+                'singular_name' => __( 'Product' ),
+                'new_item' => 'New Product',
+                'add_new_item' => 'Add New Product'
             ),
         'public' => true,
         'capability_type' => 'post',
         'has_archive' => true,
         'hierarchical' => true,
         'show_in_nav_menus' => true,
+        'show_in_menu' => true,
+        'show_in_admin_bar' => true,
         'rewrite'       => array( 'slug' => $options['slug'],'with_front' => true),
         'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes')
         )
@@ -114,6 +118,7 @@ function product_categories_taxonomies() {
                 'new_item_name' => "New Category name"
             ),
             'show_ui' => true,
+            'show_in_nav_menus' => true,
             'show_tagcloud' => false,
             'hierarchical' => true
         )
@@ -147,6 +152,7 @@ add_action( 'admin_init', 'simplecart_admin' );
 add_action( 'save_post', 'add_product_fields', 10, 3 );
 add_action( 'init', 'product_categories_taxonomies', 0 );
 
+add_theme_support( 'post-thumbnails' );
 // credit to http://vip.wordpress.com/documentation/remove-the-slug-from-your-custom-post-type-permalinks/
 add_filter( 'post_type_link', 'remove_cpt_slug', 10, 3 );
 add_action( 'pre_get_posts', 'simplecart_parse_request_tricksy' );
