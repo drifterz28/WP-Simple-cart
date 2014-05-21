@@ -38,8 +38,9 @@ function create_post_type() {
             'labels' => array(
                 'name' => __( 'Products' ),
                 'singular_name' => __( 'Product' ),
-                'new_item' => 'New Product',
-                'add_new_item' => 'Add New Product'
+                'new_item' => 'New Item',
+                'edit_item' => 'Edit Item'
+                'add_new_item' => 'Add New Item'
             ),
         'public' => true,
         'capability_type' => 'post',
