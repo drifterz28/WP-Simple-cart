@@ -5,22 +5,22 @@
     float: left;
 }
     .row {
-        width: 100%;
         float: left;
+        width: 100%;
     }
         .item {
             float: left;
         }
             .item img {
-                margin: 0 auto;
                 display: block;
+                margin: 0 auto;
             }
 
             .the-title {
-                text-align: center;
-                font-weight: bold;
                 display: block;
+                font-weight: bold;
                 padding: 10px;
+                text-align: center;
             }
 
             .price,
@@ -42,8 +42,8 @@
 
             .sale-price,
             .table-sale-price {
-                font-weight: bold;
                 color: #c00000;
+                font-weight: bold;
             }
     .itemRow td {
         vertical-align: middle;
@@ -57,8 +57,8 @@
     width: 50%;
 }
     .details-table {
-        float: right;
         border: 1px solid #ddd;
+        float: right;
     }
         .details-table td {
             border: 1px solid #ddd;
@@ -73,12 +73,12 @@
 /* ####### Floating cart ####### */
 
 #cartPopover {
-    width: 250px;
     position: relative;
+    width: 250px;
 }
 
     #triangle {
-        color: #45484A;
+        color: #45484a;
         font-size: 24px;
         left: 50%;
         margin-left: -12px;
@@ -90,9 +90,9 @@
 
     #cartPopover .headerRow > div,
     #cartPopover .itemRow > div {
-        width: 40%;
         float: left;
         min-height: 1px;
+        width: 40%;
     }
 
     #cartPopover .headerRow > .item-quantity,
@@ -117,27 +117,27 @@
 }
 
 .simpleCart_checkout {
+    background-color: #d9534f;
+    background-image: none;
+    border-color: #d43f3a;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: #fff;
+    cursor: pointer;
     display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
     font-size: 18px;
     font-weight: normal;
     line-height: 1.428571429;
+    margin-bottom: 0;
+    padding: 6px 12px;
     text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
     text-decoration: none;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 4px;
-    color: #FFF;
-    background-color: #D9534F;
-    border-color: #D43F3A;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .simpleCart_checkout:hover {
-    color: #FFF;
-    background-color: #D2322D;
-    border-color: #AC2925;
+    background-color: #d2322d;
+    border-color: #ac2925;
+    color: #fff;
 }

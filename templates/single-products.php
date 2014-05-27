@@ -15,7 +15,7 @@ get_header(); ?>
                     echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >';
                     echo the_post_thumbnail( array( $options['imgwidth'], $options['imgheight'] ) );
                     echo '</a>';
-                    // hide thumbnail for cart.
+                    // thumbnail for cart.
                     the_post_thumbnail('thumbnail',array('class' => 'item_thumb', 'style' => 'display:none'));
                 }
                 $sale_price = esc_html( get_post_meta( get_the_ID(), 'product_sale_price', true ) );
